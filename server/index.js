@@ -3,12 +3,25 @@ const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const connectDB = require("./config/database");
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://ai-study-buddy-lilac-ten.vercel.app",
+];
 
 const app = express();
 
 connectDB();
 
-app.use(cors({ origin: "http://localhost:5173", credentials: true })); // adjust origin once React is running
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true,
+})); // adjust origin once React is running
 app.use(express.json());
 app.use(cookieParser());
 
