@@ -42,7 +42,7 @@ function Login() {
         <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-8">
           <div className="flex flex-col items-center mb-8">
             <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mb-4 shadow-lg shadow-indigo-500/30">
-              Login<LogIn className="text-white" size={28} />
+              <LogIn className="text-white" size={28} />
             </div>
             <h1 className="text-2xl font-semibold text-white">Welcome back</h1>
             <p className="text-slate-400 text-sm mt-1">Log in to continue</p>

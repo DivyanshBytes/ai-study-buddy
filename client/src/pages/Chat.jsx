@@ -115,7 +115,7 @@ function Chat() {
       <div className="w-80 border-r border-white/10 flex flex-col bg-slate-900/50">
         <div className="p-6 border-b border-white/10">
           <div className="flex items-center gap-2 mb-1">
-            <Sparkles className="text-indigo-400" size={20} />
+            <img src="/new-icon.svg" alt="" className="w-5 h-5 object-contain" />
             <h1 className="text-white font-semibold text-lg">Study Buddy</h1>
           </div>
           <p className="text-slate-500 text-sm">Welcome, {user?.name?.split(" ")[0]}</p>
