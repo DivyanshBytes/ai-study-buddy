@@ -114,11 +114,15 @@ function Chat() {
       {/* Sidebar */}
       <div className="w-80 border-r border-white/10 flex flex-col bg-slate-900/50">
         <div className="p-6 border-b border-white/10">
-          <div className="flex items-center gap-2 mb-1">
-            <img src="/new-icon.svg" alt="" className="w-5 h-5 object-contain" />
-            <h1 className="text-white font-semibold text-lg">Study Buddy</h1>
+          <div className="flex items-center gap-3 mb-2">
+            <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center shadow-lg shadow-indigo-500/10">
+              <img src="/new-icon.svg" alt="" className="w-7 h-7 object-contain" />
+            </div>
+            <h1 className="text-white font-bold text-xl tracking-wide">Study Buddy</h1>
           </div>
-          <p className="text-slate-500 text-sm">Welcome, {user?.name?.split(" ")[0]}</p>
+          <p className="text-slate-400 text-sm">
+            Welcome, <span className="text-indigo-300 font-medium">{user?.name?.split(" ")[0]}</span>
+          </p>
         </div>
 
         <div className="p-4">
