@@ -1,7 +1,7 @@
 const genAI = require("./geminiClient");
 
 const generateAnswer = async (question, contextChunks) => {
-  const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-3.6-flash" });
 
   const context = contextChunks.join("\n\n---\n\n");
 
