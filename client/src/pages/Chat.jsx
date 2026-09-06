@@ -101,8 +101,12 @@ function Chat() {
   };
 
   const handleLogout = async () => {
-    await api.post("/auth/logout");
-    setUser(null);
+    try {
+      await api.post("/auth/logout");
+    } finally {
+      sessionStorage.removeItem("authToken");
+      setUser(null);
+    }
   };
 
   return (

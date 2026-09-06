@@ -21,6 +21,7 @@ function Login() {
   setLoading(true);
   try {
     const res = await login(formData);
+    sessionStorage.setItem("authToken", res.data.token);
     setUser(res.data.user);
     toast.success("Welcome back!");
     navigate("/chat");

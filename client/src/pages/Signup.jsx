@@ -23,6 +23,7 @@ const handleSubmit = async (e) => {
   setLoading(true);
   try {
     const res = await signup(formData);
+    sessionStorage.setItem("authToken", res.data.token);
     setUser(res.data.user);
     toast.success("Account created!");
     navigate("/chat");
